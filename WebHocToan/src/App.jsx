@@ -1,8 +1,12 @@
 import './index.css'
 import './App.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import { MainLayout } from './assets/layouts/MainLayout';
-import { Home } from './assets/pages/Home';
+import { MainLayout } from './layouts/MainLayout';
+import { Home } from './pages/Home';
+import { ParentLogin } from './pages/ParentLogin';
+import { ForgotPassword } from './pages/ForgotPassword';
+import { Login } from './pages/Login';
+import { Register } from './pages/Register';
 
 function App() {
   const router = createBrowserRouter(
@@ -13,6 +17,22 @@ function App() {
           <Route
             path="Home"
             element={<Home />}
+          />
+          <Route
+            path="ParentLogin"
+            element={<ParentLogin />}
+          />
+          <Route
+            path="ForgotPassword"
+            element={<ForgotPassword />}
+          />
+           <Route
+            path="Login"
+            element={<Login />}
+          />
+          <Route
+            path="Register"
+            element={<Register />}
           />
         </Route>
       </Route>
